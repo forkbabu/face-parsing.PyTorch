@@ -125,5 +125,5 @@ if __name__ == '__main__':
     flip = HorizontalFlip(p = 1)
     crop = RandomCrop((321, 321))
     rscales = RandomScale((0.75, 1.0, 1.5, 1.75, 2.0))
-    img = Image.open('data/img.jpg')
-    lb = Image.open('data/label.png')
+    img = Image.open('data/img.jpg').convert('RGB')
+    lb = Image.open('data/label.png').convert('RGB')

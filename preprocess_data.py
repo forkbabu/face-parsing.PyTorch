@@ -7,9 +7,9 @@ import cv2
 from transform import *
 from PIL import Image
 
-face_data = '/home/zll/data/CelebAMask-HQ/CelebA-HQ-img'
-face_sep_mask = '/home/zll/data/CelebAMask-HQ/CelebAMask-HQ-mask-anno'
-mask_path = '/home/zll/data/CelebAMask-HQ/mask'
+face_data = '/home/sayantan/CelebAMask-HQ/CelebA-HQ-img'
+face_sep_mask = '/home/sayantan/CelebAMask-HQ/CelebAMask-HQ-mask-anno'
+mask_path = '/home/sayantan/CelebAMask-HQ/CelebAMaskHQ-mask'
 counter = 0
 total = 0
 for i in range(15):

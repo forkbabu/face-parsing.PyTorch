@@ -1,10 +1,5 @@
 # face-parsing.PyTorch
 
-<p align="center">
-	<a href="https://github.com/zllrunning/face-parsing.PyTorch">
-    <img class="page-image" src="https://github.com/zllrunning/face-parsing.PyTorch/blob/master/6.jpg" >
-	</a>
-</p>
 
 ### Contents
 - [Training](#training)
@@ -16,9 +11,9 @@
 1. Prepare training data:
     -- download [CelebAMask-HQ dataset](https://github.com/switchablenorms/CelebAMask-HQ)
 
-	--  change file path in the `prepropess_data.py`  and run
+	--  change file path in the `preprocess_data.py`  and run
 ```Shell
-python prepropess_data.py
+python preprocess_data.py
 ```
 
 2. Train the model using CelebAMask-HQ dataset:

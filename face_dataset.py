@@ -43,9 +43,9 @@ class FaceMask(Dataset):
 
     def __getitem__(self, idx):
         impth = self.imgs[idx]
-        img = Image.open(osp.join(self.rootpth, 'CelebA-HQ-img', impth))
+        img = Image.open(osp.join(self.rootpth, 'CelebA-HQ-img', impth)).convert('RGB')
         img = img.resize((512, 512), Image.BILINEAR)
-        label = Image.open(osp.join(self.rootpth, 'mask', impth[:-3]+'png')).convert('P')
+        label = Image.open(osp.join(self.rootpth, 'CelebAMaskHQ-mask', impth[:-3]+'png')).convert('P')
         # print(np.unique(np.array(label)))
         if self.mode == 'train':
             im_lb = dict(im=img, lb=label)
@@ -60,9 +60,9 @@ class FaceMask(Dataset):
 
 
 if __name__ == "__main__":
-    face_data = '/home/zll/data/CelebAMask-HQ/CelebA-HQ-img'
-    face_sep_mask = '/home/zll/data/CelebAMask-HQ/CelebAMask-HQ-mask-anno'
-    mask_path = '/home/zll/data/CelebAMask-HQ/mask'
+    face_data = '/home/sayantan/CelebAMask-HQ/'
+    face_sep_mask = '/home/sayantan/CelebAMask-HQ/CelebAMask-HQ-mask-anno'
+    mask_path = '/home/sayantan/CelebAMask-HQ/CelebAMaskHQ-mask'
     counter = 0
     total = 0
     for i in range(15):
